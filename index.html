@@ -3,31 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Website</title>
+    <title>PINATA Fan / Inspired Site</title>
     <style>
+        /* 1. Global Reset & Retro Grid Background */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f2f5;
-            color: #333;
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #0d0d11;
+            /* Creates a retro synthwave style grid pattern */
+            background-image: 
+                linear-gradient(to right, rgba(255, 0, 128, 0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 0, 128, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* 2. Top Navigation Bar */
+        .navbar {
+            width: 100%;
+            background-color: #16161f;
+            border-bottom: 2px solid #ff007f;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-weight: bold;
+            color: #00ffff;
+            letter-spacing: 2px;
+        }
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 14px;
+        }
+        .nav-links a:hover {
+            color: #ff007f;
+        }
+
+        /* 3. Main Container Layout */
+        .container {
+            max-width: 800px;
+            width: 100%;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        /* 4. Retro Glitchy Content Box Layout */
+        .window-box {
+            background-color: #16161f;
+            border: 2px solid #ff007f;
+            border-radius: 8px;
+            box-shadow: 5px 5px 0px #00ffff;
+            margin-bottom: 40px;
+            overflow: hidden;
+        }
+        .window-header {
+            background: linear-gradient(90deg, #ff007f, #aa00ff);
+            padding: 6px 12px;
+            font-weight: bold;
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .window-content {
+            padding: 24px;
+        }
+
+        /* 5. Typography Customizations */
+        h1 {
+            color: #00ffff;
+            margin-top: 0;
+            font-size: 28px;
+            text-transform: uppercase;
+        }
+        .highlight-text {
+            color: #ff007f;
+            font-weight: bold;
+        }
+
+        /* 6. Simple Stat Layouts */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .stat-card {
+            background: #212130;
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 4px;
             text-align: center;
-            padding: 50px;
         }
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            display: inline-block;
-            max-width: 400px;
+        .stat-num {
+            font-size: 24px;
+            color: #ff007f;
+            font-weight: bold;
+            display: block;
         }
-        h1 { color: #4f46e5; }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>Hello, World!</h1>
-        <p>Welcome to my brand new website.</p>
-        <p>Managed on GitHub and hosted by Cloudflare Pages.</p>
+
+    <!-- Top Navigation Bar Menu -->
+    <div class="navbar">
+        <div class="logo">PINATA // PORTFOLIO</div>
+        <div class="nav-links">
+            <a href="#profile">01 PROFILE</a>
+            <a href="#songs">02 SONGS</a>
+            <a href="#contact">03 CONTACT</a>
+        </div>
     </div>
+
+    <div class="container">
+
+        <!-- Main Introduction Window Card -->
+        <div id="profile" class="window-box">
+            <div class="window-header">
+                <span>PROFILE.EXE</span>
+                <span>✖</span>
+            </div>
+            <div class="window-content">
+                <h1>いきててみんなかわいい。</h1>
+                <p>Welcome to a website layout inspired by the <span class="highlight-text">cute but slightly toxic</span> style of Vocaloid producer PINATA.</p>
+                <p>This layout is built with custom CSS grid patterns, bright neon box shadows, and retro block containers.</p>
+            </div>
+        </div>
+
+        <!-- Music Track Records Window Card -->
+        <div id="songs" class="window-box">
+            <div class="window-header">
+                <span>TRACK_RECORDS.DAT</span>
+                <span>✖</span>
+            </div>
+            <div class="window-content">
+                <h1>Popular Releases</h1>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-num">19M+</span> Views on YouTube
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">164K</span> Subscribers
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
 </body>
 </html>
